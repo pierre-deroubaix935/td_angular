@@ -1,0 +1,30 @@
+
+    <div class="col s12" style="margin-top: 2cm;">
+      <div class="col s12 white-text">
+        <h1>Formulaire</h1><br />
+        <i>Remplissez ce formulaire afin que nos <b>{{nbIngenieur}} ingénieurs diplomés</b> <br />travaillant des des conditions d'hygiène déplorable <br />puissent calculer votre pourcentage de chance de survie à <b>l'After chez Wam</b></i>
+      </div>
+      <form [formGroup]="model" (ngSubmit)="formSubmit()"class="white-text col s12">
+        <div class="input-field col s6">
+          <input type="text" formControlName="prenom" class="validate white-text" id="prenom">
+          <label for="prenom">Votre prénom</label>
+        </div>
+        <div class="input-field col s6">
+          <input type="number" formControlName="age" class="validate white-text" id="age">
+          <label for="age">Votre âge</label>
+        </div>
+        <div class="input-field col s6">
+          <input type="number" formControlName="poid" class="validate white-text" id="poid">
+          <label for="poid">Votre Poids (Kg)</label>
+        </div>
+        <div class="input-field col s6">
+          <input type="number" formControlName="taille" class="validate white-text" id="taille">
+          <label for="taille">Votre Taille (cm)</label>
+        </div>
+        <div class="input-field col s12">
+          <button type="submit" class="btn btn-large wave-effect red darken-3">
+            Envoyer les informations
+          </button>
+        </div>
+
+      </form>
